@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ColorBadgeComponent } from './color-badge.component';
+import { FilterBarComponent } from './filter-bar.component';
 
-describe('ColorBadgeComponent', () => {
-  let component: ColorBadgeComponent;
-  let fixture: ComponentFixture<ColorBadgeComponent>;
+describe('FilterBarComponent', () => {
+  let component: FilterBarComponent;
+  let fixture: ComponentFixture<FilterBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ColorBadgeComponent]
+      imports: [FilterBarComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ColorBadgeComponent);
+    fixture = TestBed.createComponent(FilterBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
