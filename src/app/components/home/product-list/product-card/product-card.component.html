@@ -3,6 +3,7 @@
   <img
     [src]="imageBaseUrl + '/' + product.image"
     [alt]="product.name"
+    (error)="onImgError($event)"
     class="w-full h-48 object-contain mb-4"
   />
 
@@ -21,5 +22,11 @@
         {{ finalPrice | currency : "EUR" : "symbol" }}
       </span>
     </div>
+    <a
+      [routerLink]="['/product', product.id]"
+      class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+    >
+      Voir le produit →
+    </a>
   </div>
 </div>

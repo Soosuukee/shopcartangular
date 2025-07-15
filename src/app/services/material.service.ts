@@ -9,7 +9,7 @@ export class MaterialService {
 
   constructor(private http: HttpClient) {}
 
-  getAll(): Observable<Material[]> {
+  getAllMaterials(): Observable<Material[]> {
     return this.http.get<Material[]>(this.apiUrl);
   }
 }

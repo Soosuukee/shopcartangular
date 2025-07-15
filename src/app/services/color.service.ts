@@ -9,7 +9,7 @@ export class ColorService {
 
   constructor(private http: HttpClient) {}
 
-  getAll(): Observable<Color[]> {
+  getAllColors(): Observable<Color[]> {
     return this.http.get<Color[]>(this.apiUrl);
   }
 }
