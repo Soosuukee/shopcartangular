@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CartService, CartItem } from '../../services/cart.service';
@@ -17,7 +18,7 @@ export class CartComponent implements OnInit {
   totalPrice!: () => number;
   imageBaseUrl = environment.imageBaseUrl;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
     this.cartItems = this.cartService.items;
@@ -46,5 +47,8 @@ export class CartComponent implements OnInit {
 
   trackById(index: number, item: CartItem): number {
     return item.product.id;
+  }
+  goToHome(): void {
+    this.router.navigate(['/']);
   }
 }
